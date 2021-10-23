@@ -12,10 +12,10 @@ namespace TargetInvestimentoDigital.Controllers
 {
     [ApiController]
     [Route("[controller]")]
-    public class CustomerController : ControllerBase
+    public class ClienteController : ControllerBase
     {
         private readonly IClienteRepository _cadastroRepository;
-        public CustomerController(IClienteRepository cadastroRepository)
+        public ClienteController(IClienteRepository cadastroRepository)
         {
             _cadastroRepository = cadastroRepository;
         }
