@@ -7,18 +7,15 @@ using TargetInvestimentoDigital.Models.Contracts;
 
 namespace TargetInvestimentoDigital.Repositorios
 {
-    public class CustomerRepository : IClienteRepository
+    public class ClienteRepository : IClienteRepository
     {
-        private List<Customer> custumers = new List<Customer>();
-        public bool Cadastrar(Customer request)
+        
+        public bool Cadastrar(Cliente request)
         {
-            custumers.Add(request);
+           
             return true;
         }
 
-        public bool OfertaPlanoVip(Customer customer)
-        {
-            return true;
-        }
+        
     }
 }

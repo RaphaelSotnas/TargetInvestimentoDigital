@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TargetInvestimentoDigital.Models.Contracts
 {
-    public class CustomerRequest
+    public class ClienteRequest
     {
         [Required]
         public string NameCompleto { get; set; }
@@ -17,6 +17,6 @@ namespace TargetInvestimentoDigital.Models.Contracts
         [Required]
         public Endereco EnderecoPessoal { get; set; }
         [Required]
-        public DadosFinanceiros RendaMensal { get;  set; }
+        public double RendaMensal { get;  set; }
     }
 }

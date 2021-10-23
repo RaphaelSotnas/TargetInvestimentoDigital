@@ -7,10 +7,10 @@ using TargetInvestimentoDigital.Models.Contracts;
 
 namespace TargetInvestimentoDigital.Repositorios
 {
-    public interface ICustomerRepository
+    public interface IClienteRepository
     {
-        public bool Cadastrar(Customer custumer);
-        public bool OfertaPlanoVip(Customer customer);
+        public bool Cadastrar(Cliente cliente);
+       
 
     }
 }

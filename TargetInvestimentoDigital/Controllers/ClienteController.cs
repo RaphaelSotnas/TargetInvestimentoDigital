@@ -14,37 +14,20 @@ namespace TargetInvestimentoDigital.Controllers
     [Route("[controller]")]
     public class CustomerController : ControllerBase
     {
-        private readonly ICustomerRepository _cadastroRepository;
-        public CustomerController(ICustomerRepository cadastroRepository)
+        private readonly IClienteRepository _cadastroRepository;
+        public CustomerController(IClienteRepository cadastroRepository)
         {
             _cadastroRepository = cadastroRepository;
         }
 
         [HttpPost]
-        public IActionResult Post([FromBody] CustomerRequest request)
+        public IActionResult Post([FromBody] ClienteRequest request)
         {
-            var customer = new Customer(request);
-            _cadastroRepository.Cadastrar(customer);
+            var cliente = new Cliente(request);
+            _cadastroRepository.Cadastrar(cliente);
 
-            
-
-            var response = CreateResponse(customer);
-            return Ok(response);
+            return Ok(cliente);
         }
-
         
-        private static CustomerResponse CreateResponse(Customer customer)
-        {
-            CustomerResponse response = new CustomerResponse()
-            {
-                Id = customer.IdExterno,
-                NameCompleto = customer.NomeCompleto,
-                DataDeNascimento = customer.DataDeNascimento,
-                CPF = customer.CPF,
-                EnderecoPessoal = customer.EnderecoPessoal,
-                RendaMensal = customer.RendaMensal
-            };
-            return (response);
-        }
     }
 }

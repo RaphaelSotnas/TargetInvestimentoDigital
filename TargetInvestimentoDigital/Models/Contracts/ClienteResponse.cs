@@ -6,14 +6,13 @@ using System.Threading.Tasks;
 
 namespace TargetInvestimentoDigital.Models.Contracts
 {
-    public class CustomerResponse
+    public class ClienteResponse
     {
-        public string Id { get; set; }
         public string NameCompleto { get; set; }
         public DateTime DataDeNascimento { get; set; }
         public int CPF { get; set; }
         public Endereco EnderecoPessoal { get; set; }
-        public DadosFinanceiros RendaMensal { get; set; }
+        public double RendaMensal { get; set; }
 
         
     }
