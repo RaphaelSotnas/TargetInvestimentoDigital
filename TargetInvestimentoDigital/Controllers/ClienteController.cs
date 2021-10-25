@@ -15,18 +15,22 @@ namespace TargetInvestimentoDigital.Controllers
     public class ClienteController : ControllerBase
     {
         private readonly IClienteRepository _cadastroRepository;
-        public ClienteController(IClienteRepository cadastroRepository)
+        
+        public ClienteController(IClienteRepository cadastroRepository )
         {
             _cadastroRepository = cadastroRepository;
+          
         }
 
         [HttpPost]
         public IActionResult Post([FromBody] ClienteRequest request)
         {
             var cliente = new Cliente(request);
-            _cadastroRepository.Cadastrar(cliente);
+            
+            var cadastrado = _cadastroRepository.Cadastrar(cliente);
 
-            return Ok(cliente);
+            ClienteResponse clienteResponse = new ClienteResponse(cliente,cadastrado);
+            return Ok(clienteResponse);
         }
         
     }

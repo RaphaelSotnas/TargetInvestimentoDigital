@@ -10,9 +10,11 @@ namespace TargetInvestimentoDigital.Repositorios
     public class ClienteRepository : IClienteRepository
     {
         
-        public bool Cadastrar(Cliente request)
+        public bool Cadastrar(Cliente cliente)
         {
-           
+            //AplicacaoContext aplicacaoContext = new AplicacaoContext();
+            //aplicacaoContext.Cliente.Add(cliente);
+            //aplicacaoContext.SaveChanges();
             return true;
         }
 

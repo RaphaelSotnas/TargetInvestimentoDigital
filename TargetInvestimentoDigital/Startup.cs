@@ -11,6 +11,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using TargetInvestimentoDigital.Repositorios;
 
 namespace TargetInvestimentoDigital
 {
@@ -28,6 +29,7 @@ namespace TargetInvestimentoDigital
         {
 
             services.AddControllers();
+            services.AddScoped<IClienteRepository, ClienteRepository>();
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "TargetInvestimentoDigital", Version = "v1" });

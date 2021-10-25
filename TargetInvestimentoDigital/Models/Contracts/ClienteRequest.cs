@@ -17,6 +17,6 @@ namespace TargetInvestimentoDigital.Models.Contracts
         [Required]
         public Endereco EnderecoPessoal { get; set; }
         [Required]
-        public double RendaMensal { get;  set; }
+        public double RendaMensal { get; set; }
     }
 }

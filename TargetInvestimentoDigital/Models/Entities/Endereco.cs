@@ -16,7 +16,7 @@ namespace TargetInvestimentoDigital.Models.Contracts
 
         public bool CepEhValido(Endereco endereco)
         {
-            if(endereco.CEP.All(x => char.IsLetter(x)))
+            if (endereco.CEP.All(x => char.IsLetter(x)))
             {
                 return false;
             }

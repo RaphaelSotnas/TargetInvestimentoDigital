@@ -11,7 +11,6 @@ namespace TargetInvestimentoDigital.Models
         List<string> erros = new List<string>();
         public Cliente(ClienteRequest request)
         {
-
             if (NomeCompletoEhValido(request.NomeCompleto))
             {
                 NomeCompleto = request.NomeCompleto;
@@ -57,6 +56,7 @@ namespace TargetInvestimentoDigital.Models
             {
                 erros.Add("Renda Mensal não válida");
             }
+            
         }
 
         public int Id { get; private set; }
@@ -85,7 +85,7 @@ namespace TargetInvestimentoDigital.Models
 
         public bool NomeCompletoEhValido(string nomeCompleto) 
         {
-            if (NomeCompleto.All(x => char.IsDigit(x))) 
+            if (nomeCompleto.All(x => char.IsDigit(x))) 
             {
                 return false;
             }
@@ -144,7 +144,7 @@ namespace TargetInvestimentoDigital.Models
             var resultado = endereco.CepEhValido(endereco);
 
             return resultado;
-        } 
+        }
 
         public bool RendaMensalEhValida(double rendaMensal)
         {
