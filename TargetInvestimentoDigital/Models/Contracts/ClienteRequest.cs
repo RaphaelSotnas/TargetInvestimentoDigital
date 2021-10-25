@@ -9,11 +9,11 @@ namespace TargetInvestimentoDigital.Models.Contracts
     public class ClienteRequest
     {
         [Required]
-        public string NameCompleto { get; set; }
+        public string NomeCompleto { get; set; }
         [Required]
         public DateTime DataDeNascimento { get; set; }
         [Required]
-        public int CPF { get; set; }
+        public string CPF { get; set; }
         [Required]
         public Endereco EnderecoPessoal { get; set; }
         [Required]
